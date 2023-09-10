@@ -6,4 +6,4 @@ October CMS with custom plugins
 
 docker-compose up --build
 docker-compose exec php composer install
-docker-compose exec php composer october:migrate
+docker-compose exec php php artisan october:migrate

@@ -30,9 +30,9 @@ RUN export PATH=$PATH:/var/www/task-october-cms/composer/vendor/bin
 ENV TERM=xterm
 
 ENV NVM_DIR="$HOME/.nvm"
-
-WORKDIR /var/www/task-october-cms
-
 RUN mkdir public
+WORKDIR /var/www/task-october-cms/public
+
+
 
 RUN rm -rf /var/www/html
