@@ -1,0 +1,10 @@
+columns:
+    filling_date:
+        label: filling_date
+        type: text
+    electricity_consumption:
+        label: electricity_consumption
+        type: text
+    water_consumption:
+        label: water_consumption
+        type: text

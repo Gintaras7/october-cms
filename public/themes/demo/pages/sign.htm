@@ -1,0 +1,22 @@
+url = "/signin"
+layout = "default"
+title = "Sign In"
+
+[account]
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+
+[session]
+security = "guest"
+redirect = "new-page"
+checkToken = 0
+==
+<div class="container">
+{% flash %}
+    <div class="alert alert-{{ type }}">
+        {{ message }}
+    </div>
+{% endflash %}
+{% component 'account' %}
+</div>

@@ -1,0 +1,39 @@
+<form data-request="{{ __SELF__ }}::onSaveConsumption" enctype="multipart/form-data" data-request-files>
+    <div class="form-group mt-2">
+        <label for="filling_date">Filling date</label>
+        <input
+            name="filling_date"
+            id="filling_date"
+            type="date"
+            class="form-control"
+        />
+    </div>
+
+    <div class="form-group mt-2">
+        <label for="electricity_consumption">Electricity consumption</label>
+        <input
+            name="electricity_consumption"
+            id="electricity_consumption"
+            type="number"
+            class="form-control"
+        />
+    </div>
+
+    <div class="form-group mt-2">
+        <label for="water_consumption">Water consumption</label>
+        <input
+            name="water_consumption"
+            id="water_consumption"
+            type="number"
+            class="form-control"
+        />
+    </div>
+
+    <div class="form-group my-2">
+        <label for="photos">Images</label>
+        <input name="photos[]" id="photos" type="file" class="form-control" multiple />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>

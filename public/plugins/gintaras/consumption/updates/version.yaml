@@ -1,0 +1,11 @@
+v1.0.1:
+    - "Initialize plugin"
+v1.0.2:
+    - "Created table gintaras_consumption_logs"
+    - builder_table_create_gintaras_consumption_logs.php
+v1.0.3:
+    - "Updated table gintaras_consumption_logs"
+    - builder_table_update_gintaras_consumption_logs.php
+v1.0.4:
+    - "Updated table gintaras_consumption_logs"
+    - builder_table_update_gintaras_consumption_logs_2.php

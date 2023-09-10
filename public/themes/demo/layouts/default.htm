@@ -1,0 +1,28 @@
+description = "Default layout"
+
+[resources]
+less[] = "/layouts/default.less"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        {% partial 'site/meta' %}
+    </head>
+    <body class="{{ 'page-'~this.page.id }}">
+
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+
+        <!-- Content -->
+        <section id="layout-content">
+            <div style="height: 20px;"></div>
+            {% page %}
+        </section>
+
+        <!-- Mobile -->
+        {% partial 'site/mobile' %}
+
+    </body>
+</html>

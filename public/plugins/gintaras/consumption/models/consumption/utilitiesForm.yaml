@@ -1,0 +1,21 @@
+fields:
+    filling_date:
+        label: "Filling date"
+        span: auto
+        type: datepicker
+    electricity_consumption:
+        label: "Electricity consumption"
+        span: auto
+        type: number
+    water_consumption:
+        label: "Water consuption"
+        span: auto
+        type: datepicker
+    files:
+        label: "Upload Images"
+        type: fileupload
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: auto
+            extension: auto

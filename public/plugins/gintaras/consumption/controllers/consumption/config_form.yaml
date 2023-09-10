@@ -1,0 +1,17 @@
+name: Consumption
+modelClass: Gintaras\Consumption\Models\Consumption
+form: $/gintaras/consumption/models/Consumption/utilitiesForm.yaml
+defaultRedirect: gintaras/consumption/consumption
+create:
+    title: Create
+    redirect: "gintaras/consumption/consumption/update/:id"
+    redirectClose: gintaras/consumption/consumption
+    flashSave: Saved
+update:
+    title: Update
+    redirect: gintaras/consumption/consumption
+    redirectClose: gintaras/consumption/consumption
+    flashSave: Updated
+    flashDelete: "Failed to update"
+preview:
+    title: Preview

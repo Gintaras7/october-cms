@@ -1,0 +1,32 @@
+version: "2"
+services:
+  mysql:
+    container_name: task-october-cms-db
+    build: ./docker/mysql
+    environment:
+      MYSQL_DATABASE: mydatabase1
+      MYSQL_USER: myusername
+      MYSQL_PASSWORD: mypassword
+      MYSQL_ROOT_PASSWORD: mypassword
+    volumes:
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+      - db:/var/lib/mysql
+    ports:
+      - 3307:3306
+    expose:
+      - 3306
+  php:
+    container_name: task-october-cms-php
+    build: ./docker/php
+    ports:
+      - 7001:80
+    volumes:
+      - .:/var/www/task-october-cms
+      - ./docker/php/000-default.conf:/etc/apache2/sites-available/000-default.conf
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+      - ./vendor:/var/www/task-october-cms/vendor
+    depends_on:
+      - mysql
+volumes:
+  db:
+  portainer_data:

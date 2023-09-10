@@ -1,0 +1,22 @@
+url = "/authenticated"
+layout = "default"
+title = "Authenticated"
+
+[consumptionList]
+==
+<?php
+function onStart() {
+    $this['user'] = Auth::getUser();
+}
+?>
+==
+<div class="container">
+    <h3>Hello, {{ user.name }}!</h3>
+    <br />
+
+    <h3>Consumptions table</h3>
+    
+    <a class="btn btn-primary mb-3" href="{{ 'utilities-form'|page }}">Add</a>
+
+    {% component "consumptionList" %}
+</div>

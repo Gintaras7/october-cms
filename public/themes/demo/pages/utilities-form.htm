@@ -1,0 +1,17 @@
+url = "/utilities-form"
+layout = "default"
+title = "Utilities form"
+
+[consumption]
+
+[session]
+security = "user"
+redirect = "sign"
+checkToken = 0
+==
+<div class="container-sm" style="max-width: 500px;">
+    <a href="{{ 'new-page'|page }}" >Back</a>
+    <h3 class="mt-2">Consumption form</h3>
+
+    {% component "consumption"%}
+</div>

@@ -1,0 +1,28 @@
+<table class="table table-bordered table-striped overflow-auto" style="min-width: 400px;">
+    <thead>
+        <tr>
+            <th>Filling Date</th>
+            <th>Electricity Consumption</th>
+            <th>Water Consumption</th>
+            <th>Images</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for consumption in __SELF__.consumptions %}
+        <tr>
+            <td>{{ consumption.filling_date }}</td>
+            <td>{{ consumption.electricity_consumption }}</td>
+            <td>{{ consumption.water_consumption }}</td>
+            <td> 
+                {% for image in consumption.photos %}
+                <img src="{{ image.getPath() }}" alt="Image" width="100">
+                {% endfor %}
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="4" class="text-center">`No records found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

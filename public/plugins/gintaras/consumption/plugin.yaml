@@ -1,0 +1,6 @@
+plugin:
+    name: "gintaras.Consumption::lang.plugin.name"
+    description: "gintaras.Consumption::lang.plugin.description"
+    author: Gintaras
+    icon: oc-icon-adjust
+    homepage: ""
